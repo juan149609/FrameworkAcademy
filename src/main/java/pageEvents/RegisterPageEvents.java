@@ -30,8 +30,8 @@ public class RegisterPageEvents {
 		wait.withTimeout(10, TimeUnit.SECONDS);
 		
 		wait.ignoring(NoSuchElementException.class);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerUsername)));
-		elementFetch.getWebElement("XPATH", RegisterPageElements.registerUsername).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerClickuser)));
+		elementFetch.getWebElement("XPATH", RegisterPageElements.registerClickuser).click();
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerUsername).clear();		
         elementFetch.getWebElement("XPATH", RegisterPageElements.registerUsername).sendKeys(BaseTest.excelPropertyLoader.getValue("username"));
         
@@ -90,24 +90,27 @@ public class RegisterPageEvents {
 			
 		FluentWait<WebDriver> wait2 = new FluentWait<WebDriver>(driver);
 		wait2.pollingEvery(200,  TimeUnit.MILLISECONDS);
-		wait2.withTimeout(2, TimeUnit.SECONDS);
-		
+		wait2.withTimeout(2, TimeUnit.SECONDS);	
+	try {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(HomePageElements.loader)));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerButton)));
-	try {
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerButton).click();
 		BaseTest.logger.info("Clicking Register Button");
 	}
 	catch(Exception e) {
-		  Assert.fail("Fail On Click Register");
+		  BaseTest.logger.info("Fail On Click Register");
+		  Assert.fail("Fail On Click Register");	
 	}
-	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(RegisterPageElements.IsAlreadyRegisteredLabel)));
+	
 	try {	
+		wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(RegisterPageElements.IsAlreadyRegisteredLabel)));
 	elementFetch.getWebElement("XPATH", RegisterPageElements.IsAlreadyRegisteredLabel).getText();
-	BaseTest.logger.info("Clicking Agree Button");
+	BaseTest.logger.info("Fail User Already Registered Message Found");
+	Assert.fail("Fail User Already Registered Message Found");	
 	}
 	catch(Exception f) {
-		Assert.fail("Fail On Click Agree");
+		BaseTest.logger.info("User Registered");
+		
 		}
 	
     }
@@ -124,7 +127,9 @@ public class RegisterPageEvents {
 
 	elementFetch.getWebElement("XPATH", RegisterPageElements.registerAgree).click();
     	}catch(Exception e){
-		   Assert.fail("Fail On Agremment Click");  
+    		 BaseTest.logger.info("Fail On Agremment Click");
+		   Assert.fail("Fail On Agremment Click"); 
+		  
 		   }
     }
     
@@ -143,7 +148,9 @@ public class RegisterPageEvents {
 		
 		Assert.assertTrue(elementFetch.getListWebElements("XPATH", HomePageElements.userAccountName).size()>0, "Registration failed");
     	} catch(Exception e) {
+    		  BaseTest.logger.info("Fail On Validate Register");
 			   Assert.fail("Fail On Validate Register"); 
+			 
 		   }
     }
 }
