@@ -18,11 +18,11 @@ public class MenuPageEvents {
 	
 	public void onModalOpen() {
 		ElementFetch elementFetch = new ElementFetch();
-		BaseTest.logger.info("Clicking CREATE NEW ACCOUNT");
+		BaseTest.logger.info("Click on Create New Account");
 		
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		wait.pollingEvery(500,  TimeUnit.MILLISECONDS);
-		wait.withTimeout(2, TimeUnit.SECONDS);
+		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		wait.withTimeout(10, TimeUnit.SECONDS);
 		
 		wait.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(MenuPageElements.createNewAccount)));

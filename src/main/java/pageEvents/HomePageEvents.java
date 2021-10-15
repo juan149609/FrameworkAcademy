@@ -19,7 +19,7 @@ public class HomePageEvents {
 	//Test cases
     public void clickOnMenu() { 
 		ElementFetch elementFetch = new ElementFetch();
-		BaseTest.logger.info("Clicking the menu icon");//The specific test info for the report
+		BaseTest.logger.info("Clicking on menu");//The specific test info for the report
 		
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);//Declare and initialise a fluent wait
 		wait.pollingEvery(500,  TimeUnit.MILLISECONDS); //Here we specify the timeout of the wait

@@ -21,7 +21,7 @@ public class RegisterPageEvents {
 	
 	
     public void registerForm() {
-    	BaseTest.logger.info("Entering Data to Register");
+    	BaseTest.logger.info("Register New Account Information");
     	ElementFetch elementFetch = new ElementFetch();
 		
     	
@@ -31,18 +31,22 @@ public class RegisterPageEvents {
 		
 		wait.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerUsername)));
+		BaseTest.logger.info("A username must be entered");
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerUsername).click();
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerUsername).clear();		
         elementFetch.getWebElement("XPATH", RegisterPageElements.registerUsername).sendKeys(BaseTest.excelPropertyLoader.getValue("username"));
         
+        BaseTest.logger.info("An email must be entered");
         elementFetch.getWebElement("XPATH", RegisterPageElements.registerEmail).click();
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerEmail).clear();	
     	elementFetch.getWebElement("XPATH", RegisterPageElements.registerEmail).sendKeys(BaseTest.excelPropertyLoader.getValue("email"));
     	
+    	BaseTest.logger.info("A password must be entered");
     	elementFetch.getWebElement("XPATH", RegisterPageElements.registerPassword).click();
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerPassword).clear();	
     	elementFetch.getWebElement("XPATH", RegisterPageElements.registerPassword).sendKeys(BaseTest.excelPropertyLoader.getValue("password"));
     	
+    	BaseTest.logger.info("The password must be confirmed");
     	elementFetch.getWebElement("XPATH", RegisterPageElements.registerConfirmedPassword).click();
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerConfirmedPassword).clear();	
     	elementFetch.getWebElement("XPATH", RegisterPageElements.registerConfirmedPassword).sendKeys(BaseTest.excelPropertyLoader.getValue("confirm_password"));
@@ -82,7 +86,7 @@ public class RegisterPageEvents {
     }
 
     public void clickOnRegister() {    	
-    	BaseTest.logger.info("Clicking Register Button");
+    	BaseTest.logger.info("Click on accept conditions");
     	ElementFetch elementFetch = new ElementFetch();		
 		
     	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
@@ -93,6 +97,7 @@ public class RegisterPageEvents {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerAgree)));
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerAgree).click();
 		
+		BaseTest.logger.info("Click on Register Check");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(HomePageElements.loader)));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerButton)));
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerButton).click();
@@ -100,7 +105,7 @@ public class RegisterPageEvents {
     }
     
     public void validateRegister() {
-    	BaseTest.logger.info("Validate Register");	
+    	BaseTest.logger.info("Validate that user has been registered");	
 		ElementFetch elementFetch = new ElementFetch();	
 		
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);

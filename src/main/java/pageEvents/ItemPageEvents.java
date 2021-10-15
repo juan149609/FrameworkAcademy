@@ -22,32 +22,10 @@ import test.java.BaseTest;
 
 public class ItemPageEvents {
 	
-	public void validateRegister() {
-		
-    	BaseTest.logger.info("Validate Register");	
-		ElementFetch elementFetch = new ElementFetch();	
-		
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-		wait.withTimeout(10, TimeUnit.SECONDS);
-		
-		wait.ignoring(NoSuchElementException.class);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(HomePageElements.loader)));
-		Assert.assertTrue(elementFetch.getListWebElements("XPATH", RegisterPageElements.registerUsername).size()>0, "Registration failed");
-		
-		wait.ignoring(NoSuchElementException.class);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(HomePageElements.loader)));
-		Assert.assertTrue(elementFetch.getListWebElements("XPATH", RegisterPageElements.registerPassword).size()>0, "Registration failed");
-		
-		
-    }
-	
-    
-	
 	public void clickOnSearch() {
 		
-		//Damos click en la caja de busqueda
-		BaseTest.logger.info("Clicking on search box");		
+		//When we click the search icon
+		BaseTest.logger.info("Click the search icon");		
 		ElementFetch elementFetch = new ElementFetch();
 		
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
@@ -63,8 +41,8 @@ public class ItemPageEvents {
 	
 	public void searchingItems() {
 		
-		//Agregamos el nombre del item que deseamos buscar
-		BaseTest.logger.info("Searching a laptop");
+		//Entering the name of product to search
+		BaseTest.logger.info("Enter the name of product");
 		
 		ElementFetch elementFetch = new ElementFetch();
 	
@@ -85,7 +63,8 @@ public class ItemPageEvents {
 	}
 
     public void clickOnItem() {
-    	BaseTest.logger.info("Clicking on the item searched");
+    	//Clicking on the product to see the details
+    	BaseTest.logger.info("See Product Details");
         
     	ElementFetch elementFetch = new ElementFetch();
 		
@@ -99,8 +78,8 @@ public class ItemPageEvents {
 		elementFetch.getWebElement("XPATH", ItemPageElements.itemToAdd).click();
     }
     public void clickOnAddMore() {
-    	
-    	BaseTest.logger.info("Clicking on the plus sign");
+    	//Selecting the quantity of the product
+    	BaseTest.logger.info("Select Quantity");
         
     	ElementFetch elementFetch = new ElementFetch();
 		
@@ -113,8 +92,8 @@ public class ItemPageEvents {
 		elementFetch.getWebElement("XPATH", ItemPageElements.addMoreItems).click();
     }
     public void clickOnAddToCart() {
-    	
-    	BaseTest.logger.info("Clicking on add to cart");   
+    	//Add product to cart
+    	BaseTest.logger.info("Add to Cart");   
     	ElementFetch elementFetch = new ElementFetch();	
     	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);

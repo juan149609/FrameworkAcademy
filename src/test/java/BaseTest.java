@@ -20,7 +20,6 @@ import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 import main.java.utils.ExcelPropertyLoader;
-import main.java.utils.Constants;
 
 public class BaseTest {
     public static WebDriver driver;
@@ -50,8 +49,10 @@ public class BaseTest {
     @Parameters(value = {"browserName"})//Parameter annotation where we pass the browser name
     public void beforeMethodMethod(String browserName, Method testMethod) {
         logger = extent.createTest(testMethod.getName());
+        BaseTest.logger.info("Browser is opened");
         setupDriver(browserName);
         driver.manage().window().maximize();
+        BaseTest.logger.info("Advantage Demo page is loaded");
         driver.get(Constants.url);//We pass the url that we need to open to do the testing
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
