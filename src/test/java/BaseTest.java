@@ -76,13 +76,7 @@ public class BaseTest {
     public void afterTestMethod() {
         extent.flush();
     }
-<<<<<<< HEAD
 
-
-=======
-    
-    //Here we initialize our web driver (chrome, fireFox, etc)
->>>>>>> testCasesAddedTogether
     public void setupDriver(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
