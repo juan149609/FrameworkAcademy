@@ -17,5 +17,5 @@ public interface RegisterPageElements {
     String registerPostalCode = "//*[@id=\"formCover\"]/div[3]/div[3]/sec-view/div/input";
     
     String registerAgree = "//*[@id=\'formCover\']/sec-view/div/label";
-    String registerButton = "//*[@id=\'register_btnundefined\']";
+    String registerButton = "//*[@id=\'register_btnundefined\']"; 
 }
