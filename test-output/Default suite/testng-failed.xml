@@ -3,7 +3,25 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test verbose="2" name="Default test">
     <classes>
+      <class name="main.java.pageEvents.MenuPageEvents"/>
+      <class name="main.java.pageEvents.ItemPageEvents"/>
+      <class name="main.java.pageObjects.RegisterPageElements"/>
       <class name="test.java.SampleTest"/>
+      <class name="main.java.utils.ElementFetch"/>
+      <class name="main.java.pageEvents.CheckoutPageEvents"/>
+      <class name="main.java.pageObjects.HomePageElements"/>
+      <class name="main.java.utils.SuiteListener"/>
+      <class name="main.java.pageObjects.ItemPageElements"/>
+      <class name="main.java.pageEvents.HomePageEvents"/>
+      <class name="main.java.utils.RetryAnalyser"/>
+      <class name="main.java.pageObjects.CheckoutPageElements"/>
+      <class name="test.java.BaseTest"/>
+      <class name="main.java.pageObjects.MenuPageElements"/>
+      <class name="main.java.utils.Constants"/>
+      <class name="main.java.utils.ExcelPropertyLoader"/>
+      <class name="main.java.pageEvents.RegisterPageEvents"/>
+      <class name="main.java.pageEvents.PaymentPageEvents"/>
+      <class name="main.java.pageObjects.PaymentPageElements"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)" parallel="none">
