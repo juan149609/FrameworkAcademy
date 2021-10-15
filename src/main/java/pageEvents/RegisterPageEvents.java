@@ -101,9 +101,9 @@ public class RegisterPageEvents {
 	catch(Exception e) {
 		  Assert.fail("Fail On Click Register");
 	}
-	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(RegisterPageElements.IsAlreadyRestiredLabel)));
+	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(RegisterPageElements.IsAlreadyRegisteredLabel)));
 	try {	
-	elementFetch.getWebElement("XPATH", RegisterPageElements.IsAlreadyRestiredLabel).getText();
+	elementFetch.getWebElement("XPATH", RegisterPageElements.IsAlreadyRegisteredLabel).getText();
 	BaseTest.logger.info("Clicking Agree Button");
 	}
 	catch(Exception f) {

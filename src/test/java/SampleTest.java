@@ -23,6 +23,7 @@ public class SampleTest extends BaseTest {
         
         RegisterPageEvents registerPageEvents = new RegisterPageEvents();
         registerPageEvents.registerForm();
+        registerPageEvents.clickOnRegisterAgree();
         registerPageEvents.clickOnRegister();    
         registerPageEvents.validateRegister();
         
