@@ -7,12 +7,13 @@ import main.java.pageEvents.MenuPageEvents;
 import main.java.pageEvents.PaymentPageEvents;
 import main.java.pageEvents.RegisterPageEvents;
 
+
 import org.testng.annotations.Test;
 
 public class SampleTest extends BaseTest {
 	
 	//Full Test Cases
-   @Test (priority=10)
+   @Test 
     public void fullTestMethod() { 
     	HomePageEvents homePageEvents = new HomePageEvents();
         homePageEvents.clickOnMenu();
