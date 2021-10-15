@@ -21,6 +21,7 @@ public class RegisterPageEvents {
 	
 	
     public void registerForm() {
+    	//Registration Form 
     	BaseTest.logger.info("Register New Account Information");
     	ElementFetch elementFetch = new ElementFetch();
 		
