@@ -1,69 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1163" started-at="2021-10-15T15:28:22Z" finished-at="2021-10-15T15:28:24Z">
+  <suite started-at="2021-10-15T16:47:45Z" name="Sample Test Suite" finished-at="2021-10-15T16:47:56Z" duration-ms="11020">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1163" started-at="2021-10-15T15:28:22Z" finished-at="2021-10-15T15:28:24Z">
+    <test started-at="2021-10-15T16:47:45Z" name="Test Automation" finished-at="2021-10-15T16:47:56Z" duration-ms="11020">
       <class name="test.java.SampleTest">
-        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:test.java.SampleTest@45dd4eda]" name="beforeTestMethod" is-config="true" duration-ms="1110" started-at="2021-10-15T10:28:22Z" finished-at="2021-10-15T10:28:23Z">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:test.java.SampleTest@53fdffa1]" started-at="2021-10-15T09:47:45Z" name="beforeTestMethod" finished-at="2021-10-15T09:47:46Z" duration-ms="457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method status="FAIL" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:test.java.SampleTest@45dd4eda]" name="beforeMethodMethod" is-config="true" duration-ms="0" started-at="2021-10-15T10:28:23Z" finished-at="2021-10-15T10:28:23Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browserName' is required by @Configuration on method beforeMethodMethod but has not been marked @Optional or defined
-in C:\Users\juani\AppData\Local\Temp\testng-eclipse-6521554\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browserName' is required by @Configuration on method beforeMethodMethod but has not been marked @Optional or defined
-in C:\Users\juani\AppData\Local\Temp\testng-eclipse-6521554\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:201)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:test.java.SampleTest@53fdffa1]" started-at="2021-10-15T09:47:46Z" name="beforeMethodMethod" finished-at="2021-10-15T09:47:47Z" duration-ms="1469" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void test.java.SampleTest.fullTestMethod()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethodMethod -->
-        <test-method status="SKIP" signature="fullTestMethod()[pri:10, instance:test.java.SampleTest@45dd4eda]" name="fullTestMethod" duration-ms="2" started-at="2021-10-15T10:28:23Z" finished-at="2021-10-15T10:28:23Z">
+        <test-method signature="fullTestMethod()[pri:0, instance:test.java.SampleTest@53fdffa1]" started-at="2021-10-15T09:47:47Z" name="fullTestMethod" finished-at="2021-10-15T09:47:56Z" duration-ms="8625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fullTestMethod -->
-        <test-method status="SKIP" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.SampleTest@45dd4eda]" name="afterMethodMethod" is-config="true" duration-ms="0" started-at="2021-10-15T10:28:23Z" finished-at="2021-10-15T10:28:23Z">
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.SampleTest@53fdffa1]" started-at="2021-10-15T09:47:56Z" name="afterMethodMethod" finished-at="2021-10-15T09:47:56Z" duration-ms="81" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fullTestMethod status=SUCCESS method=SampleTest.fullTestMethod()[pri:0, instance:test.java.SampleTest@53fdffa1] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodMethod -->
-        <test-method status="SKIP" signature="afterTestMethod()[pri:0, instance:test.java.SampleTest@45dd4eda]" name="afterTestMethod" is-config="true" duration-ms="0" started-at="2021-10-15T10:28:23Z" finished-at="2021-10-15T10:28:23Z">
+        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:test.java.SampleTest@53fdffa1]" started-at="2021-10-15T09:47:56Z" name="afterTestMethod" finished-at="2021-10-15T09:47:56Z" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestMethod -->
       </class> <!-- test.java.SampleTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test Automation -->
+  </suite> <!-- Sample Test Suite -->
 </testng-results>
